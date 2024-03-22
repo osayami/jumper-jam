@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyglmwvr5dl6y"]
+[gd_scene load_steps=7 format=3 uid="uid://dyglmwvr5dl6y"]
 
 [ext_resource type="Script" path="res://scripts/screens.gd" id="1_l2d8b"]
 [ext_resource type="Texture2D" uid="uid://dssu8bnhgfkwk" path="res://assets/textures/ui/gear.png" id="2_kxds3"]
 [ext_resource type="PackedScene" uid="uid://biuf4pkrkfnuw" path="res://scenes/title_screen.tscn" id="3_mhq6q"]
 [ext_resource type="PackedScene" uid="uid://bfjeqf8i7h7eh" path="res://scenes/pause_screen.tscn" id="4_l1lk2"]
+[ext_resource type="PackedScene" uid="uid://ua7uxjk63cfa" path="res://scenes/shop_screen.tscn" id="5_76diy"]
 [ext_resource type="PackedScene" uid="uid://bxsbba4tlrevh" path="res://scenes/game_over_screen.tscn" id="5_82s5d"]
 
 [node name="Screens" type="CanvasLayer"]
@@ -16,6 +17,8 @@ script = ExtResource("1_l2d8b")
 [node name="PauseScreen" parent="." instance=ExtResource("4_l1lk2")]
 
 [node name="GameOverScreen" parent="." instance=ExtResource("5_82s5d")]
+
+[node name="ShopScreen" parent="." instance=ExtResource("5_76diy")]
 
 [node name="Debug" type="Control" parent="."]
 z_index = 4000

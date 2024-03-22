@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://ua7uxjk63cfa"]
+
+[ext_resource type="Script" path="res://scripts/base_screen.gd" id="1_6wdv2"]
+[ext_resource type="Texture2D" uid="uid://b5bywagj7galy" path="res://assets/textures/ui/Box01.png" id="2_kkx74"]
+[ext_resource type="PackedScene" uid="uid://bq7wq20rgfdb4" path="res://scenes/screen_button.tscn" id="3_tsxhs"]
+[ext_resource type="Texture2D" uid="uid://dtw2gh7xuhl4v" path="res://assets/textures/ui/Closebtn2.png" id="4_xoukt"]
+[ext_resource type="Texture2D" uid="uid://cdmpavcmj40yk" path="res://assets/textures/ui/Box04.png" id="5_rffdb"]
+[ext_resource type="Texture2D" uid="uid://cmq6jtkk5t1q2" path="res://assets/textures/character/Skin2Idle.png" id="6_gpqw1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uawhh"]
+font_size = 75
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5x851"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
+[node name="ShopScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6wdv2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -379.0
+offset_right = 235.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kkx74")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -167.0
+offset_top = 9.0
+offset_right = 167.0
+offset_bottom = 112.0
+grow_horizontal = 2
+text = "The Shop"
+label_settings = SubResource("LabelSettings_uawhh")
+
+[node name="ShopBack" parent="TextureRect" instance=ExtResource("3_tsxhs")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_top = -22.0
+offset_right = 14.0
+offset_bottom = 42.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_xoukt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ShopPurchaseSkin" parent="TextureRect" instance=ExtResource("3_tsxhs")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = -145.5
+offset_right = 169.0
+offset_bottom = 145.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_rffdb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/ShopPurchaseSkin"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -152.5
+offset_right = 118.0
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_gpqw1")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect/ShopPurchaseSkin"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.5
+offset_top = -64.0
+offset_right = 86.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "NEW SKIN"
+label_settings = SubResource("LabelSettings_5x851")
