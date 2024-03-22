@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgmcutics6h86"]
+
+[ext_resource type="Script" path="res://scripts/game_camera.gd" id="1_i5xp3"]
+
+[node name="GameCamera" type="Camera2D"]
+limit_bottom = 960
+script = ExtResource("1_i5xp3")
+
+[node name="Destroyer" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Destroyer"]
