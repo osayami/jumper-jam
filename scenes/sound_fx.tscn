@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bijadkot1rtrx"]
+
+[ext_resource type="Script" path="res://scripts/sound_fx.gd" id="1_vb7xi"]
+
+[node name="SoundFX" type="Node"]
+process_mode = 3
+script = ExtResource("1_vb7xi")
+
+[node name="SoundFXPlayer_1" type="AudioStreamPlayer" parent="."]
+
+[node name="SoundFXPlayer_2" type="AudioStreamPlayer" parent="."]
+
+[node name="SoundFXPlayer_3" type="AudioStreamPlayer" parent="."]
+
+[node name="SoundFXPlayer_4" type="AudioStreamPlayer" parent="."]
+
+[node name="SoundFXPlayer_5" type="AudioStreamPlayer" parent="."]
