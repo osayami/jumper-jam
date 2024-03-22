@@ -42,12 +42,19 @@ func _on_button_pressed(button):
 			start_game.emit()
 			
 		"PauseRetry":
-			print("PauseRetry clicked")
+			change_screen(null)
+			await get_tree().create_timer(0.75).timeout
+			get_tree().paused = false
+			start_game.emit()
 		"PauseBack":
-			print("PauseBack clicked")
 			change_screen(title_screen)
+			get_tree().paused = false
+			delete_level.emit()
+			
 		"PauseClose":
-			print("PauseClose clicked")
+			change_screen(null)
+			await get_tree().create_timer(0.75).timeout
+			get_tree().paused = false
 		"GameOverRetry":
 			change_screen(null)
 			await get_tree().create_timer(0.5).timeout
@@ -73,5 +80,8 @@ func game_over(score,highscore):
 	gameover_score_label.text = "Score: "+str(score)
 	gameover_high_score_label.text = "Best: "+str(highscore)
 	change_screen(game_over_screen)
+	
+func pause_game():
+	change_screen(pause_screen)
 	
 	

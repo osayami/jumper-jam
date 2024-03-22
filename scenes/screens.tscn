@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bxsbba4tlrevh" path="res://scenes/game_over_screen.tscn" id="5_82s5d"]
 
 [node name="Screens" type="CanvasLayer"]
+process_mode = 3
 layer = 101
 script = ExtResource("1_l2d8b")
 
