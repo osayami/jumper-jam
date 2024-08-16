@@ -14,5 +14,5 @@ A casual android game developed in godot 4 following the Udemy course : [Master 
   - Checking the safe area for mobile displays
   - Pause the game when it's minimzed
   
-- Basic score systen using the FileAccess class
+- Basic score system using the FileAccess class
 - Basic shop
